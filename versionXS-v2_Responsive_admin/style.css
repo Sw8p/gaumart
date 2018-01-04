@@ -1,0 +1,539 @@
+@font-face{
+    font-family: 'myriad_pro';
+    src: url('../assets/myriad-web-pro.ttf');
+}
+
+/* ==================== INIT ==================== */
+html{
+    font-size: 16px;
+    font-size: 62,5%;
+}
+body, nav{
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    font-family: 'myriad_pro';
+    font-size: 14px;/* px pr IE*/
+    font-size: 14rem;
+}
+body, header, footer, nav, img, article, div{
+    box-sizing: border-box;
+}
+.page{
+    display: none;
+}
+a{
+    text-decoration: none !important;
+}
+
+
+/* ==================== FLEX BODY ====================*/
+body{
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: stretch;
+    align-content: space-around;
+}
+header{
+    flex: 2;
+}
+div.page{
+    flex: 7;
+}
+footer{
+    flex: 1;
+}
+
+/* ==================== HEADER MENU==================== */
+nav{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    align-items: center;
+}
+
+/* ==== MENU ITEMS==== */
+header nav a:nth-child(1),
+header nav a:nth-child(2){
+    flex: 3;
+}
+header nav a:nth-child(4),
+header nav a:nth-child(5),
+header nav a:nth-child(6){
+    flex: 2;
+}
+header nav a{
+    font-family: 'myriad_pro';
+    font-style: italic;
+    font-size: 2rem;
+    color: dimgray;
+    text-align: center;
+}
+/* RESPONSIVE */
+@media all and (max-width:1280px){
+    header nav a{
+        font-size: 1.7rem;
+    }
+}
+header nav a:hover{
+    color: dimgray;
+    text-shadow: 1px 1px 1px #e6e6e6,
+        1px 2px 1px #e6e6e6,
+        1px 3px 1px #e6e6e6,
+        1px 4px 1px #e6e6e6,
+        1px 5px 1px #e6e6e6,
+        0 1px 1px rgba(217,217,217,.3),
+        0 5px 3px rgba(217,217,217,.2),
+        0 10px 4px rgba(217,217,217,.2);
+    cursor: pointer;
+}
+header nav a:active{
+    text-shadow: 0 0 5px rgb(255, 204, 153);
+}
+
+/* ==== LOGO MENU ==== */
+header nav a:nth-child(3){
+    flex: 1;
+    //align-self: stretch;
+}
+header nav a #logo{
+    width: 100%;
+    height: 100%;
+}
+
+/* ==== LIGNE MENU ==== */
+header canvas{
+    position: absolute;
+    top: 14%;
+    margin: 0; padding: 0;
+    width: 44%;
+    height: 0;
+    border-top: .2rem solid darkgray;
+}
+canvas#Line1{
+    left: 0;
+    bottom: 20%;
+}
+canvas#Line2{
+    right: 0;
+    bottom: 20%;
+}
+
+/* ==================== FOOTER ==================== */
+footer{
+    text-align: center;
+    color: #000;
+    font-size: 2rem;
+    font-style: italic;
+}
+footer h3{
+    font-weight: bold;
+    font-size: 2rem;
+}
+footer p{
+    font-size: 1.4rem;
+    opacity: .8;
+}
+
+/* ================ PAGES ================ */
+/* ======== SLIDE ======== */
+.slide-container{
+    width: 100%;
+    height: 100%;
+    margin: 0; padding: 0;
+}
+.slide-item{
+    display: none;
+}
+.slide-item img{
+    width: 100%;
+    vertical-align: middle;
+}
+/* Fading animation */
+.fade {
+  -webkit-animation-name: fade;
+  -webkit-animation-duration: 2.9s;
+  animation-name: fade;
+  animation-duration: 2.9s;
+    animation-timing-function: ease;
+}
+
+@-webkit-keyframes fade {
+  from {opacity: .4} 
+  to {opacity: 1}
+}
+
+@keyframes fade {
+  0% {opacity: .4}
+  50% {opacity: 1}
+  100% {opacity: .7}
+}
+
+
+/* ======== SLIDE LEGENDE ======== */
+div.slide_legend{
+    position: absolute;
+    bottom: 18%;
+    right: 0%;
+    left: 70%;
+    text-align: center;
+}
+div.slide_legend h3{
+    color: orangered;
+    font-size: 2rem;
+    text-shadow: .1px .1px .2px white;
+}
+div.slide_legend h4{
+    color: orangered;
+    font-size: 1.8rem;
+    text-shadow: .1px .1px .2px white;
+}
+div.slide_legend p{
+    color: black;
+    font-size: 1.5rem;
+    text-shadow: .4px .4px .4px white;
+}
+/* RESPONSIVE */
+@media all and (max-width:1320px){
+    div.slide_legend{
+        bottom: 40%;
+    }
+}
+
+
+/* ======== RECEPTION / EVENEMENT / TRAITEUR ======== */
+
+.reception{
+    display:flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-around;
+    align-items: stretch;
+    padding: 2%;
+}
+/* --Article-- */
+.reception section{
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+    align-items: center;
+}
+div.reception article{
+    flex: 1;
+    font-size: 1.2rem;
+    text-align: center;
+    line-height: 3rem;
+    padding: 0 2rem 2rem 0;
+}
+div.reception article h2{
+    font-size: 2.4rem;
+}
+div.reception article h3{
+    font-size: 2rem;   
+}
+div.reception section img{
+    flex: 1;
+}
+div#traiteur article p{
+    padding: 0 5rem;
+    line-height: 2rem;
+}
+/* --Img-- */
+div.reception img{
+    display: block;
+    width: 100%;
+}
+div.reception img[src*="sale_sucre.jpg"]{
+    padding: 2%;
+    flex: 2;
+}
+div.reception aside{
+    flex: 2;
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-around;
+    align-items: center;
+}
+div.reception aside img:nth-child(1),
+div.reception aside img:nth-child(2){
+    flex: 1;
+}
+div.reception aside img:nth-child(1){
+    margin-bottom: 1%;
+}
+
+/* ==== REFERENCES ==== */
+div#references{
+    width: 60%;
+    padding: 2rem;
+    margin: auto;
+    font-size: 1rem;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content: space-around;
+}
+#references img{
+    display: block;
+    margin: 1rem;
+}
+
+
+/* ==== CONTACT ==== */
+#contact{
+    height: 100%;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: stretch;
+    font-size: 2rem;
+}
+
+/*#mailto*/
+#mailto{
+    flex: 1;
+    margin: 1rem 8rem;
+}
+#mailto h3{
+    font-size: 2rem;
+    color: orangered;
+    font-weight: bolder;
+    margin-bottom: 0;
+}
+#mailto p{
+    line-height: 3rem;
+}
+#mailto a{
+    color: orangered;
+}
+#mailto img{
+    height: 60%;
+    /*display: block;
+    margin: auto;*/
+}
+
+/*form*/
+#contact form{
+    flex: 1;
+    margin: 2rem;
+    margin-right: 8rem;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: stretch;
+}
+#contact form *{
+    font-size: 1.5rem;
+    font-variant-caps: small-caps;
+    font-weight: 600;
+}
+#contact form label input{
+    width: 70%;
+}
+#contact form label input,
+#contact form label textarea{
+    padding: 1rem 0;
+    padding-left: 2rem;
+    border: 1px groove dimgray 1px groove darkgray; 
+}
+#contact form label:nth-child(5){
+    align-self: stretch;
+    height: 40%
+}
+#contact form label textarea{
+    width: 100%;
+    height: 100%;
+}
+#contact form input[type="submit"]{
+    align-self: flex-end;
+    padding: .8rem 1rem;
+    border-radius: 20%/40%;
+    background-color: black;
+    color: white;
+    box-shadow: 1px 1px 6px dimgray;
+}
+#contact form input[type="submit"]:hover{
+    cursor: pointer;
+    text-shadow: 0 0 1px yellow;
+}
+#contact form input[type="submit"]:active{
+    box-shadow: -1px -1px 6px dimgray;
+    text-shadow: -1px -1px 1px white,
+        1px 1px 2px black;
+}
+
+
+
+/* RESPONSIVE */
+@media all and (max-width:1320px){
+    div.slide_legend{
+        bottom: 40%;
+    }
+}
+@media all and (max-width:1024px){
+    header canvas{
+        top: 12%;
+    }
+    .reception{
+        flex-wrap: wrap;
+    }
+    .reception img{
+        min-width: 330px;
+    }
+    div.reception aside{
+        flex-flow: row nowrap;
+        justify-content: space-between;
+        align-items: center;
+        margin-top: 1rem;
+    }
+    div.reception aside img:nth-child(1){
+        padding-right: 2%;
+        flex: 1;
+        width: 45%;
+    }
+    div.reception aside img:nth-child(2){
+        padding-right: 2%;
+        flex: 1;
+        width: 45%;
+    }
+    #mailto{
+        text-align: center;
+    }
+    
+    
+}
+
+@media all and (max-width:720px){
+    div.slide_legend{
+        bottom: 50%;
+    }
+    header canvas{
+        display: none;
+    }
+    header nav a{
+        font-size: 1.3rem;
+    }
+    div.reception img[src*="sale_sucre.jpg"]{
+        /*height: 70%;
+        align-self: flex-end;*/
+        display: none;
+    }
+    
+    /* CONTACT */
+    #contact{
+        flex-direction: column;
+        justify-content: flex-start;
+        font-size: 1rem;
+    }
+    /*#mailto*/
+    #mailto{
+        margin: .5rem;
+    }
+    #mailto h3{
+        font-size: 1.4rem;
+    }
+    #mailto p{
+        line-height: 1.5rem;
+    }
+    #mailto img{
+        display: none;
+    }
+    /*FORM*/
+    #contact form{
+        margin: .5rem;
+        display: flex;
+        flex-flow: column nowrap;
+        justify-content: space-around;
+        align-items: stretch;
+    }
+    #contact form *{
+        font-size: 1rem;
+    }
+    #contact form label input{
+        width: 95%;
+    }
+    #contact form label input,
+    #contact form label textarea{
+        padding: .3rem 0;
+        margin: .3rem auto;
+        padding-left: 1rem;
+    }
+    #contact form label textarea{
+        width: 95%;
+    }
+    #contact form input[type="submit"]{
+        align-self:center;
+        padding: .6rem 1rem;
+        margin-top: 1.4rem;
+    }
+    
+}
+
+@media all and (max-width:414px){
+    /*SLIDE*/
+    div.slide_legend{
+        bottom: 58%;
+    }
+    div.slide_legend h3{
+        font-size: 1.4rem;
+    }
+    div.slide_legend h4{
+        font-size: 1.2rem;
+    }
+    div.slide_legend p{
+        font-size: 1rem;
+    }
+
+    /*CONTENT PAGE*/
+    .reception{
+        flex-flow: row wrap;
+        align-content: center;
+    }
+    .reception section{
+        flex: 1;
+    }
+    div.reception img{
+        width: 45%;
+    }
+    div.reception article{
+        font-size: 1rem;
+        line-height: 2rem;
+    }
+    
+    div.reception article h2{
+        font-size: 1.4rem;
+    }
+    div.reception article h3{
+        font-size: 1rem;   
+    }
+    div.reception aside{
+        flex-flow: column nowrap;
+        flex: 1;
+    }
+    div.reception img[src*="sale_sucre.jpg"]{
+        display: block;
+        margin-top: 1rem;
+        padding: 9%;
+        height: auto;
+        align-self: center;
+        flex: 1;
+    }
+    div.reception aside img:nth-child(1),
+    div.reception aside img:nth-child(2){
+        padding-right: 0;
+    }
+    
+    /*FOOTER*/
+    footer h3{
+        font-size: 1.2rem;
+    }
+    footer p{
+        font-size: 1rem
+    }
+    
+}
