@@ -2,7 +2,7 @@
     <h3>GAUMART</h3>
     <p> Tél : 01 45 83 78 78 <br>
         Email : <a href="mailto:gaumart75@orange.fr?Subject=Contact%20site%20Gaumart" target="_top">gaumart75@orange.fr</a></p>
-    <img src="../assets/img/8a41c703f9e8fd0ececec4a3f35abc87.jpg" alt="photo nouriture">
+    <img src="assets/img/8a41c703f9e8fd0ececec4a3f35abc87.jpg" alt="photo nouriture">
 </div>
 
 <form method="post" onsubmit="veriForm()" action="#contact">

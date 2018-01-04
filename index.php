@@ -8,7 +8,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <title>GAUMART Traiteur Paris</title>
-        <link rel="icon" type="image/x-ico" href="../assets/img/logo_gaumart_ico.png">
+        <link rel="icon" type="image/x-ico" href="assets/img/logo_gaumart_ico.png">
         
         <link rel="stylesheet" type="text/css" media="screen" href="style/style.css">
         <link rel="stylesheet" type="text/css" media="screen" href="style/pages_style.css">
